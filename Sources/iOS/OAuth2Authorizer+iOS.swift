@@ -66,13 +66,13 @@ open class OAuth2Authorizer: OAuth2AuthorizerUI {
 	*/
 	public func openAuthorizeURLInBrowser(_ url: URL) throws {
 		
-		#if !P2_APP_EXTENSIONS
-		if !UIApplication.shared.openURL(url) {
-			throw OAuth2Error.unableToOpenAuthorizeURL
-		}
-		#else
+		// #if !P2_APP_EXTENSIONS
+		// if !UIApplication.shared.openURL(url) {
+		// 	throw OAuth2Error.unableToOpenAuthorizeURL
+		// }
+		// #else
 		throw OAuth2Error.unableToOpenAuthorizeURL
-		#endif
+		// #endif
 	}
 	#endif
 	
